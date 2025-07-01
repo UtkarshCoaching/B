@@ -394,6 +394,8 @@ h2 {
     max-height: 400px; /* Limit height for scrolling */
     overflow-y: auto;
     padding-right: 10px; /* For scrollbar */
+    width: 100%; /* নিশ্চিত করুন এটি 100% প্রস্থ নেবে */
+    box-sizing: border-box;
 }
 
 .detailed-questions-list ul {
@@ -412,6 +414,8 @@ h2 {
     font-size: 1em;
     line-height: 1.6;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    width: 100%; /* নিশ্চিত করুন এটি 100% প্রস্থ নেবে */
+    box-sizing: border-box;
 }
 
 .question-header {
@@ -473,6 +477,8 @@ h2 {
     color: #333;
     font-size: 0.95em;
     border: 1px solid #dee2e6;
+    width: 100%; /* নিশ্চিত করুন এটি 100% প্রস্থ নেবে */
+    box-sizing: border-box;
 }
 
 .detailed-options li.selected-correct {
@@ -622,6 +628,33 @@ h2 {
     .result-screen {
         padding: 0; /* রেজাল্ট স্ক্রিনের কোনো প্যাডিং থাকবে না */
     }
+
+    /* ডিটেইলড অ্যানসার সেকশনের ভিতরের এলিমেন্টগুলির জন্য */
+    .detailed-questions-list {
+        padding-right: 0; /* স্ক্রলবারের জন্য অতিরিক্ত প্যাডিং সরিয়ে দেওয়া হয়েছে */
+    }
+    .detailed-question-item {
+        padding: 10px; /* প্যাডিং কমানো হয়েছে */
+        margin-bottom: 10px; /* মার্জিন কমানো হয়েছে */
+        border-radius: 0; /* বর্ডার রেডিয়াস সরিয়ে দেওয়া হয়েছে */
+        box-shadow: none; /* শ্যাডো সরিয়ে দেওয়া হয়েছে */
+        border-left: none; /* বাম বর্ডার সরিয়ে দেওয়া হয়েছে */
+        border-right: none; /* ডান বর্ডার সরিয়ে দেওয়া হয়েছে */
+    }
+    .detailed-options li {
+        padding: 6px 10px; /* অপশন লিস্ট আইটেমের প্যাডিং কমানো হয়েছে */
+        margin-bottom: 3px; /* মার্জিন কমানো হয়েছে */
+        border-radius: 0; /* বর্ডার রেডিয়াস সরিয়ে দেওয়া হয়েছে */
+        border-left: none; /* বাম বর্ডার সরিয়ে দেওয়া হয়েছে */
+        border-right: none; /* ডান বর্ডার সরিয়ে দেওয়া হয়েছে */
+    }
+    .question-number, .question-text {
+        font-size: 1em; /* ফন্ট সাইজ কমানো হয়েছে */
+    }
+    .status-indicator {
+        font-size: 0.8em; /* ফন্ট সাইজ কমানো হয়েছে */
+        padding: 2px 6px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -687,6 +720,15 @@ h2 {
     .ranking-section {
         padding: 10px; /* আরও ছোট স্ক্রিনের জন্য প্যাডিং কমানো হয়েছে */
     }
+    /* ডিটেইলড অ্যানসার সেকশনের ভিতরের এলিমেন্টগুলির জন্য */
+    .detailed-question-item {
+        padding: 8px; /* আরও কমানো হয়েছে */
+        margin-bottom: 8px; /* আরও কমানো হয়েছে */
+    }
+    .detailed-options li {
+        padding: 5px 8px; /* আরও কমানো হয়েছে */
+        margin-bottom: 2px; /* আরও কমানো হয়েছে */
+    }
 }
 
 @media (max-width: 400px) {
@@ -721,5 +763,14 @@ h2 {
     .option {
         padding: 8px 12px;
         font-size: 0.85em;
+    }
+    /* ডিটেইলড অ্যানসার সেকশনের ভিতরের এলিমেন্টগুলির জন্য */
+    .detailed-question-item {
+        padding: 5px; /* আরও কমানো হয়েছে */
+        margin-bottom: 5px; /* আরও কমানো হয়েছে */
+    }
+    .detailed-options li {
+        padding: 4px 6px; /* আরও কমানো হয়েছে */
+        font-size: 0.8em; /* ফন্ট সাইজ কমানো হয়েছে */
     }
 }
