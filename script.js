@@ -798,13 +798,13 @@ function displayDetailedQuestions(category) {
         let statusClass = '';
 
         if (q.status === 'correct') {
-            statusText = ' (সঠিক)';
+            statusText = ' (Correct)';
             statusClass = 'correct-status';
         } else if (q.status === 'wrong') {
-            statusText = ' (ভুল)';
+            statusText = ' (Wrong)';
             statusClass = 'wrong-status';
         } else if (q.status === 'skipped') {
-            statusText = ' (অনুত্তরিত)';
+            statusText = ' (Skipped)';
             statusClass = 'skipped-status';
         }
 
