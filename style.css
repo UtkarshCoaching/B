@@ -299,6 +299,8 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 25px;
+    width: 100%; /* মোবাইলে আরও চওড়া করার জন্য যোগ করা হয়েছে */
+    box-sizing: border-box; /* padding এবং border প্রস্থের মধ্যে অন্তর্ভুক্ত করতে */
 }
 .result-screen .result-summary p {
     margin-bottom: 10px;
@@ -377,6 +379,8 @@ h2 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 25px;
     text-align: left; /* Align text to left for readability */
+    width: 100%; /* মোবাইলে আরও চওড়া করার জন্য যোগ করা হয়েছে */
+    box-sizing: border-box;
 }
 
 .detailed-answers-container h2 {
@@ -499,6 +503,8 @@ h2 {
     padding: 25px; /* প্যাডিং বাড়ানো হয়েছে */
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%; /* মোবাইলে আরও চওড়া করার জন্য যোগ করা হয়েছে */
+    box-sizing: border-box;
 }
 
 .ranking-section h2 {
@@ -551,7 +557,7 @@ h2 {
 @media (max-width: 768px) { /* নতুন ব্রেকপয়েন্ট যোগ করা হয়েছে */
     .quiz-container {
         padding: 20px;
-        max-width: 90%;
+        max-width: 98%; /* মোবাইলে আরও চওড়া করতে 98% বা 100% ব্যবহার করতে পারেন */
     }
     .start-screen h1, .result-screen h2 {
         font-size: 2.2em;
@@ -596,6 +602,13 @@ h2 {
     .status-indicator {
         margin-left: 0;
         margin-top: 5px;
+    }
+    .result-screen .result-summary, /* রেজাল্ট সেকশনের অভ্যন্তরীণ ডিভগুলো চওড়া করতে */
+    .detailed-answers-container,
+    .ranking-section {
+        width: 100%; /* তাদের প্যারেন্টের 100% প্রস্থ নিতে দিন */
+        box-sizing: border-box; /* নিশ্চিত করুন প্যাডিং এবং বর্ডার প্রস্থের মধ্যে অন্তর্ভুক্ত হয় */
+        padding: 15px; /* ছোট স্ক্রিনের জন্য প্যাডিং কিছুটা কমানো যেতে পারে */
     }
 }
 
